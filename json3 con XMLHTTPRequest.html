@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // loadJSON method to open the JSON file.
+
+        //La loadJSONfunción tiene tres parámetros:
+        //El enlace del sitio web que contiene los datos.
+        //Una función donde definimos el destino de nuestros datos.
+        //Un parámetro opcional que a veces definimos para garantizar la seguridad de los datos.
+        function loadJSON(path, success, error) {
+            //XMLHttpRequestLos objetos (XHR) se utilizan para interactuar con los servidores. Puede recuperar datos de una URL sin tener que actualizar la página completa. Esto permite que una página web actualice solo una parte de una página sin interrumpir lo que está haciendo el usuario
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                //si la operacion esta hecha
+                if (xhr.readyState === 4) {
+                    //el estado es ok
+                    if (xhr.status === 200) {
+                        success(JSON.parse(xhr.responseText));
+                    }
+                else {
+                    error(xhr);
+                }
+        }
+  };
+  xhr.open('GET', path, true);
+  xhr.send();
+}
+
+loadJSON("https://jsonplaceholder.typicode.com/posts", myData,'jsonp');
+
+function myData(Data)
+{
+
+  // Output only the details on the first post
+  console.log(Data[0]);
+
+  // output the details of first three posts
+  console.log("First three posts");
+  for(var i=0; i<3; i=i+1)
+  {
+    console.log(Data[i]);
+  } 
+  // output the id field of first five elements. 
+  console.log("First five ID");
+  for(var i=0; i<5; i=i+1)
+  {
+    console.log(Data[i].id);
+  }
+}
+
+
+
+    </script>
+</body>
+</html>
+

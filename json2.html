@@ -1,0 +1,70 @@
+<!--la funcion eval evaluara la expresión que se le pase como argumento
+//var x = eval(4*3);  //x=12
+//eval("a=1;b=2;document.write(a+b);"); //escribe tres en la página
+//dentro del contexto de json la funcion json nos permite convertir json en objeto js
+//ES LO QUE SE USABA ANTES DE TENER LOS METODOS PARSE Y STRINGIFY
+
+var jsonObject={
+    "param1":"valor1",
+    "param2":"valor2",
+    "param3":"valor3"
+}
+
+        var usuario = {
+            "nombreUsuario":"Rosa Blanca",
+            "pais":"España",
+            "altura":1.75
+        };
+        var miObjeto= eval('('+ usuario + ')');
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcion eval, parse stringfy</title>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <script>
+        function jsonParse(){
+            var str='{ "altura" : 1.85, "edad" : 41, "colorOjos" : "azul" }' ;
+            var salida="";
+          
+            //deserealizar, toma un string y lo pasa como objeto json
+            miObjeto=JSON.parse(str);
+            for (i in miObjeto){
+                salida += "Propiedad:  " + i + " = "+ miObjeto[i] + '\n';            
+            }
+
+            document.getElementById("div1").innerHTML=salida;
+            }
+
+    </script>
+<!--se ejecuta la funcion cuando se carga la pagina html-->
+</head>
+<body onload="jsonParse()">
+    <script>
+        var usuario1 = '{ "nombreUsuario" : "Rosa Blanca", "pais" : "España", "altura" : 1.75}';
+        var miObjeto1= JSON.parse(usuario1);
+      
+        var str2 = "Su nombre es: " + miObjeto1.nombreUsuario + ", es de "+ miObjeto1.pais + " y mide " + miObjeto1.altura;
+        document.getElementById("div2").innerHTML=str2;
+
+
+        var usuario2 = new Object();
+        usuario2.altura=1.85;
+        usuario2.edad=41;
+        usuario2.colorOjos ="azul";
+
+        //serializar, convertir un un objeto en una cadena json
+        var str3="las propiedades de usuario2 son: "+ JSON.stringify(usuario2);
+        
+        document.getElementById("div3").innerHTML=str3;
+
+    </script>
+</body>
+</html>
+

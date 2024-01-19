@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./bs/jquery.js"></script>
+    <link rel="stylesheet" href="css.css">
+
+    <link rel="stylesheet" href="./bs/bootstrap.css">
+    <script src="./bs/bootstrap.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top  navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#JSON or JASON">
+                <h1 class="h4">JSON or JASON</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link active" href="https://cristianpumaes6.github.io/JSON-or-JASON/src">Web Demo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cristianpumaes6.github.io/JSON-or-JASON">Documento Readme</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/CristianPumaES6/JSON-or-JASON">Repositorio Git</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <br><br><br>
+        <div class="media pt-4 mt-4">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-12 text-center">
+                    <img src="./bs/nodebot.png" class="text-center" style="width:80%; max-width: 300px;" alt="...">
+                </div>
+                <div class="media-body col-lg-9 col-md-12 mb-4">
+                    <h1 class="h1 mt-2 pt-2 ml-4 pl-4">JSON (JavaScript Object Notation)</h1>
+                    <p class="h4 mt-2 pt-2">Es un estándar basado en texto plano para el intercambio de información. La
+                        ventaja de JSON es que los servicios que comparten información por éste método, no necesitan
+                        hablar el mismo idioma, es decir, el emisor puede ser Java y el receptor PHP.</p>
+
+                    <p>
+                        Para entender mas como interactuar la data JSON con la vista del navegador se recomienda revisar
+                        los siguientes archivos:
+                    </p>
+
+                    <ul>
+                        <li>
+                            revisar el Readme del proyecto.
+                        </li>
+                        <li>
+                            Revisar el archivo ./src/index.html
+                        </li>
+                        <li>
+                            Revisar el archivo ./src/js.js
+                        </li>
+                    </ul>
+                    <a class="h2" href="https://github.com/CristianPumaES6/JSON-or-JASON">URL del proyecto</a>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <!--*
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********  LOS UNICOS ARCHIVOS QUE IMPORTAN SON :    CSS.cs , JS.js   y esta parte del html    ********************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+    -->
+
+    <div class="container bg-dark border border-primary rounded mt-5 pt-3">
+        <p style="color:white">
+            Ejercicio 1 : Listar todos nuestros autos.
+            <br>
+            <input type="button" class="btn btn-outline-success mt-3" value="Listar todo los autos" id="btn_list_auto">
+            <input type="button" class="btn btn-outline-danger mt-3" value="Borrar todo los autos"
+                id="btn_list_clear_auto">
+        </p>
+    </div>
+
+    <div class="container">
+        <!-- Ver el archivo js.js para comopreder como se listaron los autos -->
+        <div id="divListAuto1" class="row mt-3">
+        </div>
+    </div>
+
+    <!--        Ejercicio 2       -->
+    <div class="container bg-dark border border-primary rounded mt-5 pt-3">
+        <p style="color:white">
+            Ejercicio 2 : Listar todos los años.
+            <br>
+            <input type="button" class="btn btn-outline-success mt-3" value="Listar todo los años" id="btn_list_anios">
+            <input type="button" class="btn btn-outline-danger mt-3" value="Borrar todo los años"
+                id="btn_list_clear_anios">
+        </p>
+    </div>
+
+    <div class="container">
+        <div class="input-group mb-3 mt-3 col-lg-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Años</label>
+            </div>
+            <select id="selectAnio" class="custom-select"></select>
+        </div>
+    </div>
+
+    <!--        Ejercicio 3       -->
+    <div class="container bg-dark border border-primary rounded mt-5 pt-3">
+        <p style="color:white">
+            Ejercicio 3 : Listar autos por color.
+            <br>
+            <div class="input-group mb-3 mt-3 col-lg-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                </div>
+                <select id="selectColor" class="custom-select">
+                    <option value="Red">Red</option>
+                    <option value="Blue">Blue</option>
+                    <option value="Silver">Silver</option>
+                </select>
+            </div>
+        </p>
+    </div>
+
+    <div class="container mb-5 pb-5">
+        <!-- Ver el archivo js.js para comopreder como se listaron los autos -->
+        <div id="divListAuto2" class="row mt-3">
+        </div>
+    </div>
+
+
+
+    <!--*
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+        *********************************************************************************************
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+
+    <script src="js.js"></script>
+
+</body>
+
+</html>

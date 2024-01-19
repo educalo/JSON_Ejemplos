@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myInfo1 = { 
+            Name: "GFG",  
+            Age:22, 
+            Department : "Computer Science and Engineering", 
+            Year: "3rd"
+        } 
+        //convertir un objeto en javascript a json string
+        const Obj1 = JSON.stringify(myInfo1); 
+        console.log(Obj1)
+
+        const myInfo2 = `{ 
+            "Name": "GFG",  
+            "Age":22, 
+            "Department" : "Computer Science and Engineering", 
+            "Year": "3rd"
+        }` 
+   
+        //convertir json string a objeto javascript
+        const Obj2 = JSON.parse(myInfo2); 
+        console.log(Obj2.Name)   
+        console.log(Obj2.Age)
+    </script>
+</body>
+</html>
+
